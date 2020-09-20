@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Task List</title>
+    <title>New Task</title>
   </head>
   <body>
     <!-- menu icon -->
@@ -34,30 +34,54 @@
                 <a class="nav-link text-white" href="index.html">New Tasks <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Task List</a>
+                <a class="nav-link text-white" href="index2.html">Task List</a>
               </li>
             </ul>
           </div>
     </nav>
-    <h1 id="heading">Task List</h1>
-    <div class="row tasklist">
-        <div class="col">
-            <ul class="list-group" id="tasksList">
-                <li class="list-group-item">
-                    <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
-                        <h5>Clean</h5>
-                        <span class="badge badge-info">TODO</span>
-                    </div>
-                    <div class="d-flex w-100 mb-3 justify-content-between">
-                        <small>Assigned To: Louis</small>
-                        <small>Due: 28/09/2020</small>
-                    </div>
-                    <p>Mop floors and vacuum</p>
-                </li>
-            </ul>
+    <h1 id="heading">New Task</h1>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nameinput">Name</label>
+                <input type="text" class="form-control" id="nameinput" aria-describedby="nameinput" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="yourstatus">Status</label>
+                <select class="form-control" id="yourstatus" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>TODO</option>
+                    <option>IN PROGRESS</option>
+                    <option>REVIEW</option>
+                    <option>DONE</option>
+                </select>
+            </div>
         </div>
-        <div class="col"></div>
-    </div>
+        <div class="form-group">
+            <label for="yourdescription">Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col">
+                <label for="assignee">Assigned To</label>
+                <input type="text" class="form-control" id="assignee" required>
+            </div>
+            <div class="form-group col">
+                <label for="duedate">Due Date</label>
+                <input type="date" class="form-control" id="duedate" required>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Add Task</button>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-warning btn-lg btn-block">Cancel</button>
+                </div>
+            </div>
+        </div>
+      </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
