@@ -1,0 +1,14 @@
+form, .tasklist {
+    padding: 35px;
+}
+
+.navbar-brand {
+    font-size: 40px;
+}
+
+#heading {
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+}
+
